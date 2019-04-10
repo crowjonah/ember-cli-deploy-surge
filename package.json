@@ -1,14 +1,17 @@
 {
   "name": "ember-cli-deploy-surge",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember CLI Deploy plugin to deploy to surge.sh.",
   "keywords": [
     "ember-addon",
     "ember-cli-deploy-surge"
   ],
-  "repository": "https://github.com/crowjonah/ember-cli-deploy-surge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowjonah/ember-cli-deploy-surge.git"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "crowjonah <crowjonah@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -31,6 +34,7 @@
     "broccoli-asset-rev": "^2.7.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "child-process-promise": "^2.2.1",
     "ember-cli": "~3.8.1",
     "ember-cli-dependency-checker": "^3.1.0",
     "ember-cli-eslint": "^4.2.3",
@@ -60,5 +64,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js"
 }
