@@ -23,7 +23,7 @@ module.exports = {
           domain: this.readConfig('domain'),
           prodject: this.readConfig('project')
         }
-      }
+      },
       configure: function (context) {
         this.log('ember-cli-deploy-surge configure hook');
       },
