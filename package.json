@@ -6,7 +6,7 @@
     "ember-addon",
     "ember-cli-deploy-surge"
   ],
-  "repository": "",
+  "repository": "https://github.com/crowjonah/ember-cli-deploy-surge",
   "license": "MIT",
   "author": "",
   "directories": {
