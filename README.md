@@ -1,7 +1,7 @@
 ember-cli-deploy-surge
 ==============================================================================
 
-[Short description of the addon.]
+This is a unintelligent wrapper that spawns a child process that executes the `surge` command line in an ember-cli-deploy pipeline.
 
 
 Compatibility
@@ -22,12 +22,19 @@ ember install ember-cli-deploy-surge
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+In your Ember app's `config/deploy.js` file, you must define `domain` and can optionally set `project`
+```
+ENV['surge'] = {
+  domain: 'https://example-domain.surge.sh',
+  project: 'tmp/deploy-dist/' // this is the default, matching ember-cli-deploy-build
+}
+```
 
 
 Contributing
 ------------------------------------------------------------------------------
 
+This doesn't have any tests or error handling to speak of, so please do!
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
