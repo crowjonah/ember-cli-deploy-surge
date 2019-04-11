@@ -1,10 +1,10 @@
 {
   "name": "ember-cli-deploy-surge",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ember CLI Deploy plugin to deploy to surge.sh.",
   "keywords": [
     "ember-addon",
-    "ember-cli-deploy-surge"
+    "ember-cli-deploy-plugin"
   ],
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "dependencies": {
     "ember-cli-babel": "^7.1.2",
     "ember-cli-deploy-plugin": "^0.2.9",
+    "rsvp": "^4.8.4",
     "surge": "^0.20.3"
   },
   "devDependencies": {
