@@ -7,22 +7,22 @@ var assert = chai.assert;
 var stubProject = {
   name: function(){
     return 'my-project';
-  }
+  },
+  project: 'dummy/app',
+  domain: 'test-domain.test-site.com'
 };
 
 describe('my new plugin', function() {
-  var subject, mockUi;
+  var subject, plugin;
 
   beforeEach(function() {
     subject = require('../../index');
-    mockUi = {
-      verbose: true,
-      messages: [],
-      write: function() { },
-      writeLine: function(message) {
-        this.messages.push(message);
-      }
-    };
+    plugin = subject.createDeployPlugin({name:'my plugin' });
+    // plugin = {
+    //   readConfig: function(propName) {
+    //     return stubProject[propName];
+    //   }
+    // };
   });
 
   it('has a name', function() {
@@ -38,9 +38,8 @@ describe('my new plugin', function() {
     var context;
 
     it('calls the hook', function() {
-      plugin = subject.createDeployPlugin({name:'my plugin' });
+      
       context = {
-        ui: mockUi,
         project: stubProject,
         config: { "my-plugin": {
             pluginClient: function(context) {
