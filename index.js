@@ -1,7 +1,6 @@
 'use strict';
 
 var BasePlugin = require('ember-cli-deploy-plugin')
-var RSVP = require('rsvp')
 var exec = require('child-process-promise').exec
 var path = require('path')
 var fs = require('fs')
@@ -19,7 +18,7 @@ module.exports = {
         project: 'tmp/deploy-dist/'
       },
       requiredConfig: ['domain'],
-      willUpload: function(context) {
+      willUpload: function() {
         let self = this
         let oldFile = path.join(self.readConfig('project'), 'index.html')
         let newFile = path.join(self.readConfig('project'), '200.html')
@@ -29,7 +28,7 @@ module.exports = {
             newFile,
             function (err) {
               if (err != null) {
-                self.log(err, { color: red })
+                self.log(err, { color: 'red' })
                 reject(err)
               }
               resolve(newFile)
@@ -38,7 +37,7 @@ module.exports = {
 
         return rename;
       },
-      upload: function(context) {
+      upload: function() {
         var self = this
         var project = this.readConfig('project')
         var domain = this.readConfig('domain')

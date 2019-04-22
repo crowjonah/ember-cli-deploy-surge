@@ -1,8 +1,8 @@
-var chai  = require('chai');
-var chaiAsPromised = require("chai-as-promised");
-chai.use(chaiAsPromised);
+const chai  = require('chai');
+const chaiAsPromised = require("chai-as-promised");
 
-var assert = chai.assert;
+chai.use(chaiAsPromised);
+const assert = chai.assert;
 
 var stubProject = {
   name: function(){
