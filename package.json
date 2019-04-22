@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-surge",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Ember CLI Deploy plugin to deploy to surge.sh.",
   "keywords": [
     "ember-addon",
