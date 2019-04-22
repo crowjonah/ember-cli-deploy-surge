@@ -12,12 +12,12 @@ var stubProject = {
   domain: 'test-domain.test-site.com'
 };
 
-describe('my new plugin', function() {
+describe('surge', function() {
   var subject, plugin;
 
   beforeEach(function() {
-    subject = require('../../index');
-    plugin = subject.createDeployPlugin({name:'my plugin' });
+    surge = require('../../index');
+    plugin = surge.createDeployPlugin({name:'surge-test' });
     // plugin = {
     //   readConfig: function(propName) {
     //     return stubProject[propName];
@@ -26,33 +26,11 @@ describe('my new plugin', function() {
   });
 
   it('has a name', function() {
-    var result = subject.createDeployPlugin({
-      name: 'test-plugin'
+    var result = surge.createDeployPlugin({
+      name: 'surge-test'
     });
 
-    assert.equal(result.name, 'test-plugin');
+    assert.equal(result.name, 'surge-test');
   });
 
-  describe('hook',function() {
-    var plugin;
-    var context;
-
-    it('calls the hook', function() {
-      
-      context = {
-        project: stubProject,
-        config: { "my-plugin": {
-            pluginClient: function(context) {
-              return {
-                upload: function(context) {
-                  return Promise.resolve();
-                }
-              };
-            }
-          }
-        }
-      };
-      return assert.isFulfilled(plugin.upload(context))
-    });
-  });
 });
