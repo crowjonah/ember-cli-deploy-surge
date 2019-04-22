@@ -31,7 +31,7 @@
     "surge": "^0.20.3"
   },
   "devDependencies": {
-    "@ember/optional-features": "^0.6.3",
+    "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^2.7.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
