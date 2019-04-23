@@ -1,5 +1,6 @@
 ember-cli-deploy-surge
 ==============================================================================
+[![Build Status](https://travis-ci.com/crowjonah/ember-cli-deploy-surge.svg?branch=master)](https://travis-ci.com/crowjonah/ember-cli-deploy-surge) [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-deploy-surge.svg)](https://emberobserver.com/addons/ember-cli-deploy-surge)
 
 This is a unintelligent wrapper that spawns a child process that executes the `surge` command line in an ember-cli-deploy pipeline.
 
