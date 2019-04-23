@@ -20,7 +20,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "./node_modules/mocha/bin/mocha tests/unit/index.js"
+    "test": "nyc mocha tests/unit/index.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "ember-cli-deploy-plugin": "^0.2.9",
@@ -40,6 +41,7 @@
     "eslint-plugin-node": "^7.0.1",
     "mocha": "^6.1.2",
     "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^14.0.0",
     "qunit-dom": "^0.8.0"
   },
   "engines": {
