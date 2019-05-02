@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-surge",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Ember CLI Deploy plugin to deploy to surge.sh.",
   "keywords": [
     "ember-addon",
@@ -24,13 +24,13 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
+    "child-process-promise": "^2.2.1",
     "ember-cli-deploy-plugin": "^0.2.9",
     "surge": "^0.20.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "child-process-promise": "^2.2.1",
     "coveralls": "^3.0.3",
     "ember-cli": "~3.8.1",
     "ember-cli-dependency-checker": "^3.1.0",
