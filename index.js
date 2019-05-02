@@ -4,6 +4,7 @@ var BasePlugin = require('ember-cli-deploy-plugin')
 var exec = require('child-process-promise').exec
 var path = require('path')
 var fs = require('fs')
+let surge = path.resolve(path.dirname(require.resolve('surge')), '../../.bin/surge')
 
 module.exports = {
   name: require('./package').name,
@@ -32,7 +33,7 @@ module.exports = {
                 reject(err)
               }
               resolve(newFile)
-            })  
+            })
         })
 
         return rename;
@@ -42,7 +43,7 @@ module.exports = {
         var project = this.readConfig('project')
         var domain = this.readConfig('domain')
 
-        return exec(`surge ${project} ${domain}`)
+        return exec(`${surge} ${project} ${domain}`)
           .then(function (result) {
             self.log('surge upload exec then, `domain`: ' + domain + '`project`: ' + project) // this logs, but no others
             var stdout = result.stdout
